@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Alura Challenges Oracle ONE</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <header>
-  <img src="./img/logoA.svg" alt="logo com a letra A minuscula na cor Azul">
-  
-  </header>
-  <section>
-    <h2>Digite seu texto</h2>
-    <p>Apenas letras minúsculas e sem acento.</p>
-    <button>Criptografar</button>
-    <button>Descriptografar</button>
-    <card>
-      <img src="./img/personWatching.svg" alt="person looking at a diamond">
-      <span>Nenhuma mensagem encontrada</span>
-      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-    </card>
-  </section>
+  <header></header>
+  <div class="container">
+    <!--parte esqueda da pagina-->
+    <div class="logo">
+      <img src="./img/logoA.svg" alt="logo com a letra A minuscula na cor Azul">
+    </div>
+    <div class="criptar">
+      <textarea name="texto" class="texto" id="input-textarea" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+      <div class="atencao">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm10-2a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0v-5a1 1 0 0 1 1-1Z"
+            clip-rule="evenodd"></path>
+          <path d="M13 7.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+        </svg>
+        <p>Apenas letras minúsculas e sem acento.</p>
+      </div>
+      <div class="botoes">
+        <button class="btn-criptografar" type="button" onclick="criptografar()">Criptografar</button>
+      
+        <input type="button" class="btn-descriptografar" value="Descriptografar" onclick="descriptografar()" />
+      </div>
+    </div>
 
-<footer>
-  <p>Author: Graciliana Kascher<br>
-    <a href="mailto:eagraciliana@gmail.com">eagraciliana@gmail.com</a>
-  </p>
-</footer>
+    <!--a parte direita da pagina-->
+    <div class="criptado">
+      <img src="./img/personWatching.svg" alt="pessoa olhando com uma lupa um diamante ">
+      <div class="mensagem-criptado">
+      <h2>Nenhuma mensagem encontrada</h2>
+      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+    </div>
+    </div>
+
+  </div>
 </body>
+
 
 </html>

@@ -1,3 +1,247 @@
-*
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    22deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 45, 133, 1) 100%
+  );
+  color: white;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.logo {
+  margin: 2.5rem;
+  paddig: 2.5rem;
+  white: 10%;
+}
+.criptar {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  left: 20%;
+  top: 15%;
+  background: #fff;
+}
+textarea {
+  color: #0a3871;
+}
+.texto {
+  position: absolute;
+  width: 82%;
+  height: 70%;
+  left: 10%;
+  top: 8%;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: #f3f5fc;
+}
+.texto::placeholder {
+  color: #0a3871;
+}
+.texto:focus,
+.texto:active {
+  border: none;
+  outline: none;
+}
+.atencao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 80%;
+}
+.atencao p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: #495057;
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.atencao svg {
+  color: #495057;
+}
 
-font-family: 'Inter', sans-serif;
+.botoes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex;
+  padding: 1% 0;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 84%;
+}
+.btn-criptografar {
+  align-items: start;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 45%;
+  background-color: #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+}
+.btn-descriptografar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 45%;
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #0a3871;
+}
+.btn-descriptografar:hover{
+  margin: 0.3%;
+  width: 24.5%;
+  padding: 1.8%;
+}
+.btn-criptografar:hover {
+  margin: 0.3%;
+  width: 24.5%;
+  padding: 1.8%;
+}
+.criptado {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 30%;
+  height: 90%;
+  left: 60%;
+  top: 5%;
+  background: #fff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+.criptado img {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 10%;
+}
+.mensagem-criptado {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  text-align: center;
+
+}
+.mensagem-criptado h2{
+  width: 60%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  height: 200%;
+  text-align: center;
+  color: #343a40;
+  
+}
+.mensagem-criptado p{
+  width: 80%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+}
+/* Responsive design */
+@media (max-width: 57.5em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .criptar {
+    width: 100%;
+  }
+  .texto {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 5%;
+  }
+  .atencao {
+    width: 80%;
+    left: 10%;
+    top: 67%;
+  }
+  .atencao p {
+    font-size: 16px;
+  }
+  .botoes {
+    width: 80%;
+    left: 10%;
+    top: 70%;
+  }
+  .btn-criptografar,
+  .btn-descriptografar {
+    width: 48%;
+    border-radius: 16px;
+  }
+  .btn-criptografar:hover,
+  .btn-descriptografar:hover {
+    margin: 0.3%;
+    width: 47.5%;
+    padding: 1.8%;
+  }
+  .criptado {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: 80%;
+  }
+  .mensagem-criptado {
+    width: 100%;
+    top: 5%;
+  }
+  .criptado img {
+    top: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
